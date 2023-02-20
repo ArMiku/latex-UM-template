@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -6,6 +6,7 @@
 \usepackage[paper=a4paper]{geometry}
 \newgeometry{top=3.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm}
 \usepackage{graphicx}
+\usepackage{subfigure}
 \usepackage{comment}
 \usepackage{fancyhdr}
 \usepackage{framed}
@@ -424,6 +425,7 @@ $$E * (F * E)\qquad (A+B)^T$$
 On the first case, on the left, is is necessary to define a new operator that get in input a matrix on the left and an optimizer on the right. This is no provided from the previous version because this case is given by the usage of parenthesis inside expressions that introduce different priorities. The second case, on the right, as we have seen is a simple transformation a \verb|future_matrix|, for the moment is not available but it is necessary only to override the original methods performing first the \verb|eval| method and later return the matrix transformed. These operations are not required for this assignment but the entire structure allows to do that assuming that the matrix will be completed in the future. The constraints of this structure are: re-definition of the same structure for the \verb|future_matrix|, to distinguish the static or dynamic matrices, given by decision of avoiding possible wraps; large set of possible combinations for operations, each case has be implemented separatly also if they have more or less the same code and behavior. \\
 In order to give a complete library could be interesting to introduce also this operations and possibly other ones. And as we have seen another interesting improvement could be to develop an dynamic algorithm that adjust the value of $K$ for the block parallel product between matrices. We have seen that the values of $K$ have an important role in term of performance, for that reason a possible heuristic or strategy could be reasonable to adapt.
 
+% \addcontentsline{toc}{section}{\texorpdfstring{\qquad}{} References}
 % \bibliographystyle{abbrv}
 % \bibliography{references.bib}
 
